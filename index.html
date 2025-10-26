@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTA-Petri Net Integration for Cyber-Physical Supply Chain Risk with Mitigation Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Integrated FTA-Petri Net Model for Cyber-Physical Supply Chain Risk Assessment</h1>
+            <div class="subtitle">Traditional vs. Cyber-Physical Integration vs. Mitigation-Enhanced Model</div>
+        </div>
+        
+        <div class="main-content">
+            <!--MITIGATION STRATEGIES PANEL.Moves.-->
+            <div class="mitigation-panel">
+                <div class="mitigation-header">
+                    Risk Mitigation Strategies
+                </div>
+                <div class="mitigation-list">
+                    <div class="mitigation-item" id="mit-backup">
+                        <input type="checkbox" class="mitigation-checkbox" onchange="toggleMitigation('backup')">
+                        <div class="mitigation-info">
+                            <div class="mitigation-name">Automated Backup System</div>
+                            <div class="mitigation-desc">15-min recovery from ransomware</div>
+                        </div>
+                        <div class="mitigation-cost">$5K/mo</div>
+                    </div>
+                    <div class="mitigation-item" id="mit-firewall">
+                        <input type="checkbox" class="mitigation-checkbox" onchange="toggleMitigation('firewall')">
+                        <div class="mitigation-info">
+                            <div class="mitigation-name">Advanced Firewall & IDS</div>
+                            <div class="mitigation-desc">AI-powered threat detection</div>
+                        </div>
+                        <div class="mitigation-cost">$3K/mo</div>
+                    </div>
+                    <div class="mitigation-item" id="mit-buffer">
+                        <input type="checkbox" class="mitigation-checkbox" onchange="toggleMitigation('buffer')">
+                        <div class="mitigation-info">
+                            <div class="mitigation-name">30-Day Buffer Inventory</div>
+                            <div class="mitigation-desc">Strategic reserves for disruptions</div>
+                        </div>
+                        <div class="mitigation-cost">$15K</div>
+                    </div>
+                    <div class="mitigation-item" id="mit-dual">
+                        <input type="checkbox" class="mitigation-checkbox" onchange="toggleMitigation('dual')">
+                        <div class="mitigation-info">
+                            <div class="mitigation-name">Dual Sourcing Strategy</div>
+                            <div class="mitigation-desc">Backup suppliers with 48hr activation</div>
+                        </div>
+                        <div class="mitigation-cost">$4K/mo</div>
+                    </div>
+                    <div class="mitigation-item" id="mit-maintenance">
+                        <input type="checkbox" class="mitigation-checkbox" onchange="toggleMitigation('maintenance')">
+                        <div class="mitigation-info">
+                            <div class="mitigation-name">Predictive Maintenance</div>
+                            <div class="mitigation-desc">IoT/ML equipment monitoring</div>
+                        </div>
+                        <div class="mitigation-cost">$6K/mo</div>
+                    </div>
+                    <div class="mitigation-item" id="mit-redundancy">
+                        <input type="checkbox" class="mitigation-checkbox" onchange="toggleMitigation('redundancy')">
+                        <div class="mitigation-info">
+                            <div class="mitigation-name">Equipment Redundancy</div>
+                            <div class="mitigation-desc">Hot-swappable backup systems</div>
+                        </div>
+                        <div class="mitigation-cost">$25K</div>
+                    </div>
+                </div>
+            </div>
+            <div class="simulation-info">
+                This model compares traditional physical-only supply chain risk assessment with an integrated cyber-physical approach using Fault Tree Analysis (FTA) and Petri Nets. Watch how tokens (black dots) move through the network representing system states and disruption cascades.
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 16px; margin-bottom: 20px; border-radius: 4px; border: 1px solid #dee2e6;">
+                <div style="font-size: 14px; color: #212529; font-weight: 600; margin-bottom: 12px;">
+                    Quick Start Guide
+                </div>
+                <div style="font-size: 13px; color: #495057; line-height: 1.8;">
+                    <strong>Step 1:</strong> Click <span style="background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Reset All</span> to ensure both models start fresh<br>
+                    <strong>Step 2:</strong> Click <span style="background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Trigger Ransomware</span> to simulate a cyber attack<br>
+                    <strong>Step 3:</strong> Watch the <strong>left model</strong> (traditional) - only the manufacturer gets disrupted<br>
+                    <strong>Step 4:</strong> Watch the <strong>right model</strong> (integrated) - see how the disruption cascades to distributor and customer<br>
+                    <strong>Step 5:</strong> Click <span style="background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Compare Models</span> to see the cost difference<br>
+                    
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #dee2e6;">
+                        <strong style="color: #212529;">What you'll observe:</strong>
+                        <div style="margin-top: 6px;">
+                            • <strong>Black dots (tokens)</strong> move between circles showing state changes<br>
+                            • <strong>Red dashed arrows</strong> in the right model show cyber-physical cascades<br>
+                            • <strong>Cost difference</strong> reveals hidden risks (often 40-60% higher) that traditional models miss<br>
+                            • <strong>Key finding:</strong> Traditional risk assessment significantly underestimates true cyber-physical impacts
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #dee2e6;">
+                        <strong style="color: #212529;">FTA Analysis Box (right model only):</strong>
+                        <div style="margin-top: 6px;">
+                            The <strong>Fault Tree Analysis (FTA)</strong> box shows the probability of system failure based on the current state. FTA is a top-down risk assessment method that calculates failure probability from component failures and their relationships.
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #dee2e6;">
+                        <strong style="color: #212529;">For deeper analysis:</strong> Try the <span style="background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Run 30-Day Simulation</span> to see probabilistic events over time, or use <span style="background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Step Forward</span> to advance day-by-day.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="parameters-section">
+                <div class="parameters-header">Adjustable Risk Parameters</div>
+                <div style="background: #f8f9fa; padding: 14px; margin-bottom: 20px; border-radius: 4px; border: 1px solid #dee2e6;">
+                    <div style="font-size: 13px; color: #495057; line-height: 1.6;">
+                        <strong style="color: #212529;">Configure your risk model:</strong> Adjust these parameters to simulate different risk scenarios and see how they impact costs.
+                        <div style="margin-top: 8px;">
+                            • <strong>Probabilities (%):</strong> Daily chance of each disruption occurring (e.g., 2% = happens roughly once every 50 days)<br>
+                            • <strong>Cascade Delay:</strong> How quickly disruptions spread from one node to another in the network<br>
+                            • <strong>Recovery Factor:</strong> Multiplier for how long it takes systems to return to normal operations<br>
+                            • <strong>Cost Multiplier:</strong> Scale all financial impacts up or down to match your industry/company size
+                        </div>
+                    </div>
+                </div>
+                <div class="parameter-grid">
+                    <div class="parameter-control">
+                        <label class="parameter-label" title="Daily probability that a ransomware attack will occur">Ransomware Attack Probability</label>
+                        <div class="parameter-input">
+                            <input type="range" id="ransomwareProb" min="0" max="10" value="2" step="0.5" oninput="updateParameter('ransomware', this.value)">
+                            <span class="parameter-value" id="ransomwareValue">2.0%</span>
+                        </div>
+                    </div>
+                    <div class="parameter-control">
+                        <label class="parameter-label" title="Daily probability that critical equipment will fail">Equipment Failure Probability</label>
+                        <div class="parameter-input">
+                            <input type="range" id="equipmentProb" min="0" max="10" value="5" step="0.5" oninput="updateParameter('equipment', this.value)">
+                            <span class="parameter-value" id="equipmentValue">5.0%</span>
+                        </div>
+                    </div>
+                    <div class="parameter-control">
+                        <label class="parameter-label" title="Daily probability that a key supplier will face bankruptcy">Supplier Bankruptcy Probability</label>
+                        <div class="parameter-input">
+                            <input type="range" id="supplierProb" min="0" max="10" value="1" step="0.5" oninput="updateParameter('supplier', this.value)">
+                            <span class="parameter-value" id="supplierValue">1.0%</span>
+                        </div>
+                    </div>
+                    <div class="parameter-control">
+                        <label class="parameter-label" title="Time delay before a disruption spreads to connected nodes">Cascade Propagation Delay</label>
+                        <div class="parameter-input">
+                            <input type="range" id="cascadeDelay" min="100" max="2000" value="800" step="100" oninput="updateParameter('delay', this.value)">
+                            <span class="parameter-value" id="delayValue">0.8 sec</span>
+                        </div>
+                    </div>
+                    <div class="parameter-control">
+                        <label class="parameter-label" title="Multiplier for how long recovery takes (higher = slower recovery)">Recovery Time Factor</label>
+                        <div class="parameter-input">
+                            <input type="range" id="recoveryFactor" min="1" max="10" value="3" oninput="updateParameter('recovery', this.value)">
+                            <span class="parameter-value" id="recoveryValue">3x</span>
+                        </div>
+                    </div>
+                    <div class="parameter-control">
+                        <label class="parameter-label" title="Scale all costs to match your organization size">Cost Impact Multiplier</label>
+                        <div class="parameter-input">
+                            <input type="range" id="costMultiplier" min="50" max="200" value="100" step="10" oninput="updateParameter('cost', this.value)">
+                            <span class="parameter-value" id="costValue">1.0x</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speed-control">
+                <div style="background: #f8f9fa; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #dee2e6; font-size: 13px; color: #495057;">
+                    <strong style="color: #212529;">View controls:</strong> Adjust animation speed for presentations or zoom in to examine details
+                </div>
+                <span class="speed-label">Animation Speed:</span>
+                <div class="speed-buttons">
+                    <button class="speed-btn" onclick="setSpeed(0.5)" title="Slow motion for detailed observation">0.5x</button>
+                    <button class="speed-btn active" onclick="setSpeed(1)" title="Normal speed">1x</button>
+                    <button class="speed-btn" onclick="setSpeed(2)" title="Faster simulation">2x</button>
+                    <button class="speed-btn" onclick="setSpeed(4)" title="Quick overview">4x</button>
+                </div>
+            </div>
+            
+            <div class="zoom-control" style="margin-bottom: 15px;">
+                <span class="speed-label">Diagram Zoom:</span>
+                <div class="speed-buttons">
+                    <button class="speed-btn" onclick="setZoom(0.8)" title="Zoom out for overview">80%</button>
+                    <button class="speed-btn active" onclick="setZoom(1.0)" title="Default view">100%</button>
+                    <button class="speed-btn" onclick="setZoom(1.2)" title="Zoom in for details">120%</button>
+                    <button class="speed-btn" onclick="setZoom(1.5)" title="Maximum zoom for presentations">150%</button>
+                </div>
+            </div>
+            
+            <div class="notation-section">
+                <div style="background: #f8f9fa; padding: 14px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #dee2e6;">
+                    <div style="font-size: 13px; color: #495057; line-height: 1.6;">
+                        <strong style="color: #212529;">Quick Start Guide - With Risk Mitigation:</strong> Follow these steps to run a complete risk analysis with mitigation strategies.
+                        <div style="margin-top: 8px;">
+                            • <strong>Step 1 - Activate Mitigations:</strong> Check any of the 6 mitigation strategies above to reduce risk impacts<br>
+                            • <strong>Step 2 - Adjust Risk Probabilities:</strong> Use the sliders above to set your scenario (default: 15% ransomware, 10% equipment, 8% supplier)<br>
+                            • <strong>Step 3 - Run Simulation:</strong> Click "Run 30-Day Simulation" to see risks play out over time with/without mitigations<br>
+                            • <strong>Step 4 - Compare Results:</strong> Watch how costs differ between all three models - traditional, integrated, and mitigated<br>
+                            • <strong>Step 5 - Manual Testing:</strong> Use the trigger buttons to force specific events and see mitigation effectiveness<br>
+                            • <strong>Key Insight:</strong> Active mitigations reduce both probability AND impact. Watch the ROI indicator to see if mitigation costs are justified by prevented losses
+                        </div>
+                    </div>
+                </div>
+                <div style="background: #f8f9fa; padding: 12px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #dee2e6; font-size: 13px; color: #495057;">
+                    <strong style="color: #212529;">Petri Net notation guide:</strong> Places (P) represent system states, Transitions (T) represent events or activities that change states
+                </div>
+                <div class="notation-tables">
+                    <div class="notation-table">
+                        <h3>Places (P) - System States</h3>
+                        <table>
+                            <tr><td>P₁-P₃</td><td>Manufacturer States (Normal, Disrupted, Recovery)</td></tr>
+                            <tr><td>P₄-P₆</td><td>Distributor States (Normal, Disrupted, Recovery)</td></tr>
+                            <tr><td>P₇-P₉</td><td>Customer States (Normal, Impacted, Recovery)</td></tr>
+                            <tr><td>P₁₀</td><td>IT System State (Integrated Model Only)</td></tr>
+                            <tr><td>P₁₁</td><td>Production System State (Integrated Model Only)</td></tr>
+                            <tr><td>P₁₂</td><td>Logistics System State (Integrated Model Only)</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="notation-table">
+                        <h3>Transitions (T) - Events/Activities</h3>
+                        <table>
+                            <tr><td>T₁-T₃</td><td>Physical Disruptions / FTA Triggers</td></tr>
+                            <tr><td>T₄-T₅</td><td>Direct Impact / Cyber Cascades</td></tr>
+                            <tr><td>T₆-T₈</td><td>Recovery Initiation</td></tr>
+                            <tr><td>T₉-T₁₁</td><td>System Restoration</td></tr>
+                            <tr><td>T₁₂-T₁₃</td><td>Cyber Spread Events (Integrated Only)</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <svg width="24" height="24">
+                        <circle cx="12" cy="12" r="10" fill="white" stroke="#4a90e2" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3" fill="#2c3e50"/>
+                    </svg>
+                    <span>Normal State (with token)</span>
+                </div>
+                <div class="legend-item">
+                    <svg width="24" height="24">
+                        <circle cx="12" cy="12" r="10" fill="white" stroke="#e74c3c" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3" fill="#2c3e50"/>
+                    </svg>
+                    <span>Disrupted State (with token)</span>
+                </div>
+                <div class="legend-item">
+                    <svg width="24" height="24">
+                        <circle cx="12" cy="12" r="10" fill="white" stroke="#f39c12" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3" fill="#2c3e50"/>
+                    </svg>
+                    <span>Recovery State (with token)</span>
+                </div>
+                <div class="legend-item">
+                    <svg width="24" height="24">
+                        <circle cx="12" cy="12" r="10" fill="white" stroke="#9b59b6" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3" fill="#2c3e50"/>
+                    </svg>
+                    <span>Cyber System (with token)</span>
+                </div>
+                <div class="legend-item">
+                    <svg width="40" height="20">
+                        <line x1="0" y1="10" x2="30" y2="10" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,2"/>
+                        <polygon points="30,10 25,7 25,13" fill="#e74c3c"/>
+                    </svg>
+                    <span>Cascade Arc</span>
+                </div>
+            </div>
+            
+            <!--Real-time Results Bar-->
+            <div class="results-bar">
+                <div class="results-bar-grid">
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">System State</div>
+                        <div class="result-bar-value" id="systemStateBar">NORMAL</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">FTA Risk</div>
+                        <div class="result-bar-value" id="ftaProbBar">0%</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">Cascades</div>
+                        <div class="result-bar-value" id="cascadeCountBar">0</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">Traditional Cost</div>
+                        <div class="result-bar-value" id="standardCostBar">$0</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">Integrated Cost</div>
+                        <div class="result-bar-value" id="integratedCostBar">$0</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">Mitigated Cost</div>
+                        <div class="result-bar-value" id="mitigatedCostBar">$0</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">Active Mitigations</div>
+                        <div class="result-bar-value" id="activeMitigationsBar">0/6</div>
+                    </div>
+                    <div class="result-bar-item">
+                        <div class="result-bar-label">Savings</div>
+                        <div class="result-bar-value" id="savingsBar">$0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="models-wrapper">
+                <div class="model-section standard">
+                    <div class="model-title">Traditional Supply Chain Model (Physical Risks Only)</div>
+                    <canvas id="standardCanvas" width="600" height="650"></canvas>
+                </div>
+                
+                <div class="model-section risk">
+                    <div class="model-title">FTA-Integrated Model (Cyber-Physical Risks)</div>
+                    <canvas id="riskCanvas" width="600" height="650"></canvas>
+                </div>
+                
+                <div class="model-section mitigated">
+                    <div class="model-title">Mitigation-Enhanced Model (With Active Countermeasures)</div>
+                    <canvas id="mitigatedCanvas" width="600" height="650"></canvas>
+                </div>
+            </div>
+            
+            <!--Sim Controls Section-->
+            <div class="controls-section">
+                <div class="controls-header">Simulation Controls</div>
+                <div style="background: #f8f9fa; padding: 14px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #dee2e6;">
+                    <div style="font-size: 13px; color: #495057; line-height: 1.6;">
+                        <strong style="color: #212529;">How the simulation works:</strong> Each "day" randomly checks if disruptions occur based on your probability settings above.
+                        <div style="margin-top: 8px;">
+                            • <strong>Run 30-Day:</strong> Automatically simulates one month of operations (1 second = 1 day)<br>
+                            • <strong>Step Forward:</strong> Advance one day at a time for detailed observation (or press spacebar)<br>
+                            • <strong>Manual Triggers:</strong> Force specific events to see their immediate impact and cascades<br>
+                            • <strong>Key Insight:</strong> Watch how disruptions cascade differently between all three models<br>
+                            • <strong style="color: #16a34a;">Mitigation Effect:</strong> Active mitigations reduce both probability AND cost impact - watch the third model!
+                        </div>
+                    </div>
+                </div>
+                <div style="background: #f8f9fa; padding: 14px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #dee2e6;">
+                    <div style="font-size: 13px; color: #495057; line-height: 1.6;">
+                        <strong style="color: #212529;">Analysis & utility controls:</strong> Tools for comparing models and managing your simulation data.
+                        <div style="margin-top: 8px;">
+                            • <strong>Compare Models:</strong> Calculate the cost difference between traditional and integrated models after events occur<br>
+                            • <strong>Export Data:</strong> Download simulation results as JSON for further analysis or documentation<br>
+                            • <strong>Reset All:</strong> Clear all disruptions and return both models to their initial state<br>
+                            • <strong>Important:</strong> Traditional model shows only direct impacts, while integrated model reveals hidden cascade costs
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="btn-primary" onclick="runSimulation()" id="simBtn" title="Simulate 30 days of supply chain operations">Run 30-Day Simulation</button>
+                    <button onclick="triggerRansomware()" id="ransBtn" title="Manually trigger a ransomware attack">Trigger Ransomware</button>
+                    <button onclick="triggerEquipment()" id="equipBtn" title="Manually trigger equipment failure">Trigger Equipment Failure</button>
+                    <button onclick="triggerSupplier()" id="suppBtn" title="Manually trigger supplier bankruptcy">Trigger Supplier Issue</button>
+                    <button onclick="stepSimulation()" id="stepBtn" title="Advance simulation by one day (Spacebar)">Step Forward</button>
+                    <button onclick="compareModels()" title="Calculate cost difference between models">Compare Models</button>
+                    <button onclick="exportData()" title="Download simulation data as JSON">Export Data</button>
+                    <button onclick="resetAll()" title="Reset both models to initial state">Reset All</button>
+                </div>
+            </div>
+            
+            <!--Detailed Results(Dropdown)-->
+            <details style="margin-top: 20px;">
+                <summary style="cursor: pointer; padding: 15px; background: #fafafa; border-radius: 8px; font-weight: 600; color: #2c3e50;">
+                    View Detailed Results & Metrics
+                </summary>
+                <div class="results-panel" style="margin-top: 10px;">
+                <div class="results-grid">
+                    <div class="result-card" id="stateCard">
+                        <div class="result-label">System State</div>
+                        <div class="result-value" id="systemState">Normal</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Current operational status</li>
+                                <li>Normal or Cascading</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">FTA Probability</div>
+                        <div class="result-value" id="ftaProb">0%</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Failure likelihood</li>
+                                <li>From fault tree analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Cascade Count</div>
+                        <div class="result-value" id="cascadeCount">0</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Cyber→physical spreads</li>
+                                <li>Secondary disruptions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Traditional Cost</div>
+                        <div class="result-value" id="standardCost">$0</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Physical risks only</li>
+                                <li>No cascade effects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Integrated Cost</div>
+                        <div class="result-value" id="integratedCost">$0</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Cyber + physical risks</li>
+                                <li>Includes cascades</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Mitigated Cost</div>
+                        <div class="result-value" id="mitigatedCost">$0</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>With active mitigations</li>
+                                <li>Reduced impacts</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Cost Difference</div>
+                        <div class="result-value" id="costDiff">0%</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Integrated vs traditional</li>
+                                <li>Hidden risk exposure</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Active Mitigations</div>
+                        <div class="result-value" id="activeMitigations">0</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Risk reduction strategies</li>
+                                <li>Cost: $<span id="mitigationCost">0</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Mitigation Savings</div>
+                        <div class="result-value" id="mitigationSavings">$0</div>
+                        <div class="result-description">
+                            <ul>
+                                <li>Prevented losses</li>
+                                <li>ROI: <span id="mitigationROI">0%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </details>
+        </div>
+    </div>
+    
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
