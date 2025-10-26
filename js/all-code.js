@@ -1251,3 +1251,15 @@ window.compareModels = compareModels;
 window.exportData = exportData;
 window.resetAll = resetAll;
 window.toggleMitigation = toggleMitigation;
+
+// Make functions available globally for onclick handlers
+// Github pages fix?
+window.runSimulation = runSimulation;
+window.triggerRansomware = triggerRansomware;
+window.triggerEquipment = triggerEquipment;
+window.triggerSupplier = triggerSupplier;
+window.stepSimulation = stepSimulation;
+window.compareModels = compareModels;
+window.exportData = exportData;
+window.resetAll = resetAll;
+window.toggleMitigation = toggleMitigation;
