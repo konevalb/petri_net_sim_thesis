@@ -1,3 +1,4 @@
+const standardCanvas = document.getElementById('standardCanvas');
 const standardCtx = standardCanvas.getContext('2d');
 const riskCanvas = document.getElementById('riskCanvas');
 const riskCtx = riskCanvas.getContext('2d');
@@ -1240,3 +1241,13 @@ document.addEventListener('keydown', (e) => {
         stepSimulation();
     }
 });
+
+window.runSimulation = runSimulation;
+window.triggerRansomware = triggerRansomware;
+window.triggerEquipment = triggerEquipment;
+window.triggerSupplier = triggerSupplier;
+window.stepSimulation = stepSimulation;
+window.compareModels = compareModels;
+window.exportData = exportData;
+window.resetAll = resetAll;
+window.toggleMitigation = toggleMitigation;
